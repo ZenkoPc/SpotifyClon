@@ -1,0 +1,299 @@
+[
+    {
+        "language":"English",
+        "common":"English"
+    },
+    {
+        "language":"Afrikaans",
+        "common":"Afrikaans"
+    },
+    {
+        "language":"አማርኛ",
+        "common":"Amharic"
+    },
+    {
+        "language":"العَرَبِيَّة",
+        "common":"Arabic"
+    },
+    {
+        "language":"عربي مصري",
+        "common":"Arabic (Egypt)"
+    },
+    {
+        "language":"العَرَبِيَّة مغربي",
+        "common":"Arabic (Morocco)"
+    },
+    {
+        "language":"العربية السعودية",
+        "common":"Arabic (Saudi Arabia)"
+    },
+    {
+        "language":"Azərbaycanca",
+        "common":"Azerbaijani"
+    },
+    {
+        "language":"Български",
+        "common":"Bulgarian"
+    },
+    {
+        "language":"भोजपुरी",
+        "common":"Bhojpuri"
+    },
+    {
+        "language":"বাংলা",
+        "common":"Bengali"
+    },
+    {
+        "language":"Bosanski",
+        "common":"Bosnian"
+    },
+    {
+        "language":"Catala",
+        "common":"Catalan"
+    },
+    {
+        "language":"Cestina",
+        "common":"Czech"
+    },
+    {
+        "language":"Dansk",
+        "common":"Danish"
+    },
+    {
+        "language":"Deustch",
+        "common":"German"
+    },
+    {
+        "language":"Eλληνικά",
+        "common":"Greek"
+    },
+    {
+        "language":"English",
+        "common":"United Kingdom"
+    },
+    {
+        "language":"Español de España",
+        "common":"European Spanish"
+    },
+    {
+        "language":"Español de Latinoamerica",
+        "common":"Latin American Spanish"
+    },
+    {
+        "language":"Español (Argentina)",
+        "common":"Spanish (Argentina)"
+    },
+    {
+        "language":"Español (Mexico)",
+        "common":"Spanish (Mexico)"
+    },
+    {
+        "language":"Eesti",
+        "common":"Estonian"
+    },
+    {
+        "language":"Euskara",
+        "common":"Basque"
+    },
+    {
+        "language":"فارسی",
+        "common":"Persian"
+    },
+    {
+        "language":"Suomeksi",
+        "common":"Finnish"
+    },
+    {
+        "language":"Filipino",
+        "common":"Filipino"
+    },
+    {
+        "language":"Francais",
+        "common":"French"
+    },
+    {
+        "language":"Francais Canadien",
+        "common":"Canadian French"
+    },
+    {
+        "language":"Galego",
+        "common":"Galician"
+    },
+    {
+        "language":"ગુજરાતી",
+        "common":"Gujarati"
+    },
+    {
+        "language":"עברית",
+        "common":"Hebrew"
+    },
+    {
+        "language":"हिन्दी",
+        "common":"Hindi"
+    },
+    {
+        "language":"Hrvatski",
+        "common":"Croatian"
+    },
+    {
+        "language":"Magyar",
+        "common":"Hungarian"
+    },
+    {
+        "language":"Bahasa Indonesia",
+        "common":"Indonesian"
+    },
+    {
+        "language":"Islenska",
+        "common":"Icelandic"
+    },
+    {
+        "language":"Italiano",
+        "common":"Italian"
+    },
+    {
+        "language":"日本語",
+        "common":"Japanese"
+    },
+    {
+        "language":"ಕನ್ನಡ",
+        "common":"Kannada"
+    },
+    {
+        "language":"한국어",
+        "common":"Korean"
+    },
+    {
+        "language":"Lietuviu",
+        "common":"Lithuanian"
+    },
+    {
+        "language":"Latviesu",
+        "common":"Latvian"
+    },
+    {
+        "language":"Македонски",
+        "common":"Macedonian"
+    },
+    {
+        "language":"മലയാളം",
+        "common":"Malayalam"
+    },
+    {
+        "language":"मराठी",
+        "common":"Marathi"
+    },
+    {
+        "language":"Melayu",
+        "common":"Malay"
+    },
+    {
+        "language":"Norsk",
+        "common":"Norwegian"
+    },
+    {
+        "language":"नेपाली",
+        "common":"Nepali"
+    },
+    {
+        "language":"Nederlands",
+        "common":"Dutch"
+    },
+    {
+        "language":"ଓଡ଼ିଆ",
+        "common":"Odia"
+    },
+    {
+        "language":"ਪੰਜਾਬੀ",
+        "common":"Punjabi"
+    },
+    {
+        "language":"پنجابی",
+        "common":"Punjabi (Nashk)"
+    },
+    {
+        "language":"Polski",
+        "common":"Polish"
+    },
+    {
+        "language":"Portugues do Brazil",
+        "common":"Brazilian Portuguese"
+    },
+    {
+        "language":"Portugues",
+        "common":"European Portuguese"
+    },
+    {
+        "language":"ਪRomana",
+        "common":"Romanian"
+    },
+    {
+        "language":"Русский",
+        "common":"Russian"
+    },
+    {
+        "language":"Slovencina",
+        "common":"Slovak"
+    },
+    {
+        "language":"Slovenski",
+        "common":"Slovenian"
+    },
+    {
+        "language":"Srpski",
+        "common":"Serbian"
+    },
+    {
+        "language":"Svenska",
+        "common":"Swedish"
+    },
+    {
+        "language":"Kiswahill",
+        "common":"Swahill"
+    },
+    {
+        "language":"தமிழ்",
+        "common":"Tamil"
+    },
+    {
+        "language":"తెలుగు",
+        "common":"Telugu"
+    },
+    {
+        "language":"ภาษาไทย",
+        "common":"Thai"
+    },
+    {
+        "language":"Türkçe",
+        "common":"Turkish"
+    },
+    {
+        "language":"Українська",
+        "common":"Ukrainian"
+    },
+    {
+        "language":"اردو",
+        "common":"Urdu"
+    },
+    {
+        "language":"Tiếng Việt",
+        "common":"Viatnamese"
+    },
+    {
+        "language":"简体中文",
+        "common":"Simplified Chinese"
+    },
+    {
+        "language":"繁體中文 (香港)",
+        "common":"Chinese (Traditional) Honk Kong"
+    },
+    {
+        "language":"中文",
+        "common":"Traditional Chinese"
+    },
+    {
+        "language":"IsiZulu",
+        "common":"Zulu"
+    }
+    
+]
