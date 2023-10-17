@@ -8,6 +8,7 @@ import { useButtonsStore } from "./store/useButtonsStore"
 import { LoginModal } from "./components/SpotifyMain/loginModal"
 import { Header } from "./components/SpotifyHeader/header"
 import { LoginPodcastModal } from "./components/SpotifyMain/podcastModal"
+import { MenuResponsive } from "./components/menuResponsive"
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
     <>
       <div className="flex flex-col h-[100%] lg:p-2 gap-2 relative">
         <div className="flex flex-col lg:flex-row h-full sm:h-[92%] lg:gap-2 overflow-hidden relative">
-          <header className="block lg:hidden">
+          <header className="block z-50 lg:hidden">
             <Header />
           </header>
           <aside className="hidden lg:block min-w-[280px] z-20 w-[545px] h-full">
@@ -60,6 +61,7 @@ function App() {
       </div>
       <LoginModal />
       <LoginPodcastModal />
+      <MenuResponsive />
     </>
   )
 }

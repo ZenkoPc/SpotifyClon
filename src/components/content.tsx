@@ -10,6 +10,8 @@ import { Episode } from "./SpotifyMain/episode"
 import { PodcastCategory } from "./SpotifyMain/podcastCategory"
 import { Search } from "./SpotifyMain/search"
 import { useButtonsStore } from "../store/useButtonsStore"
+import { Artist } from "./SpotifyMain/artist"
+import { Album } from "./SpotifyMain/album"
 
 export const Content = () => {
 
@@ -110,6 +112,24 @@ export const Content = () => {
                 </div>
                 <div className="h-full overflow-x-hidden overflow-scroll">
                     <Search />
+                </div>
+            </div>}
+            {!loadingDefault && page === 'artist' && 
+            <div className=" h-full rounded-lg relative">
+                <div className="absolute h-16 top-0 w-full hidden lg:block z-50">
+                    <TopTools />
+                </div>
+                <div className="h-full overflow-x-hidden overflow-scroll">
+                    <Artist />
+                </div>
+            </div>}
+            {!loadingDefault && page === 'album' && 
+            <div className=" h-full rounded-lg relative">
+                <div className="absolute h-16 top-0 w-full hidden lg:block z-50">
+                    <TopTools />
+                </div>
+                <div className="h-full overflow-x-hidden overflow-scroll">
+                    <Album />
                 </div>
             </div>}
         </>

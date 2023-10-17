@@ -53,12 +53,12 @@ export const TopTools = () => {
                 </div>
             </div>
             <div className="font-bold absolute flex items-start mt-3 h-full gap-8 top-0 right-6">
-                <div className="hidden 2xl:flex 2xl:mt-3 text-primaryGray border-r-2 pr-7 gap-2 tracking-widest">
+                <div className="hidden 2xl:flex 2xl:mt-3 text-primaryGray border-r-0 pr-7 gap-2 tracking-widest">
                     <a href="#" className="hover:text-white hover:scale-105 transition-all">Premium</a>
                     <a href="#" className="hover:text-white hover:scale-105 transition-all">Asistencia</a>
                     <a href="#" className="hover:text-white hover:scale-105 transition-all">Descargar</a>
                 </div>
-                <div className="flex gap-8 items-center relative">
+                <div className="flex gap-8 items-center relative hidden">
                     <a href="#" className="text-primaryGray transition-all hover:text-white hover:scale-105">
                         Registrarte
                     </a>

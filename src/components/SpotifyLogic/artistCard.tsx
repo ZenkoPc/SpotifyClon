@@ -1,8 +1,17 @@
+import { useArtistStore } from "../../store/useArtistStore"
 import { useButtonsStore } from "../../store/useButtonsStore"
+import { usePlaylistStore } from "../../store/usePlaylistStore"
 
 export const ArtistCard = (artists: {})  => {
     
     const filter = useButtonsStore(store => store.selectedFilter)
+    const setArtistInfo = useArtistStore(store => store.setArtistInfo)
+    const setPage = usePlaylistStore(store => store.setPage)
+
+    const handleClick = (value: string) => {
+        setArtistInfo(value)
+        setPage('artist')
+    }
 
     return (
         <>
@@ -11,7 +20,7 @@ export const ArtistCard = (artists: {})  => {
             ? (
                 artists?.artists?.items?.map((ob) => {
                     return (
-                        <div className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                        <div onClick={() => { handleClick(ob.id) }} className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                             <div className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                 <div className="p-2 h-40 relative">
                                     <img className="w-full rounded-full h-full" src={ob?.images[0]?.url} alt="" />
@@ -35,7 +44,7 @@ export const ArtistCard = (artists: {})  => {
             ) : (
                 artists?.artists?.items?.slice(0,7)?.map((ob) => {
                     return (
-                        <div className="relative group min-h-[300px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                        <div onClick={() => { handleClick(ob.id) }} className="relative group min-h-[300px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                             <div className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                 <div className="p-2 h-40 relative">
                                     <img className="w-full rounded-full h-full" src={ob?.images[0]?.url} alt="" />

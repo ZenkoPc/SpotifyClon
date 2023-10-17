@@ -14,6 +14,7 @@ import { useButtonsStore } from "../../store/useButtonsStore"
 import { ArtistCard } from "./artistCard"
 import { TimeIcon } from "../../icons/time"
 import { SearchIcon } from "../../icons/search"
+import { useAlbumStore } from "../../store/useAlbumStore"
 
 const getCategories = (categories: res[], query: string, handleClick: (icon: string, value:string) => void) => {
 
@@ -79,7 +80,8 @@ export const SearchOption = () => {
     const setHeaderStyle = useButtonsStore(store => store.setHeaderStyle)
     const setResults = useSearchStore(store => store.setResults)
     const setQuery = useSearchStore(store => store.setQuery)
-
+    const setAlbum = useAlbumStore(store => store.setAlbum)
+    
     const handleCategory = (value: string) => {
         setResults(value)
         setQuery(value)
@@ -132,7 +134,12 @@ export const SearchOption = () => {
         loginImg(value)
     }
 
-    console.log(results)
+    const handleAlbum = (value: string) => {
+        setAlbum(value)
+        setPage('album')
+        console.log(value)
+    }
+
     return (
         <div className="px-5 pt-32">
             {loading && <Loading /> }
@@ -255,7 +262,7 @@ export const SearchOption = () => {
                             ? (
                                 results?.albums?.items?.map((ob) => {
                                     return (
-                                        <div className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                                        <div onClick={() => { handleAlbum(ob.id) }} className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                             <div onClick={() => { handleSelectPlaylist(ob) }} className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                 <div className="p-2 h-40 relative">
                                                     <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />
@@ -279,7 +286,7 @@ export const SearchOption = () => {
                             ) : (
                                 results?.albums?.items?.slice(0,7)?.map((ob) => {
                                     return (
-                                        <div className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                                        <div onClick={() => { handleAlbum(ob.id) }} className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                             <div onClick={() => { handleSelectPlaylist(ob) }} className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                 <div className="p-2 h-40 relative">
                                                     <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />

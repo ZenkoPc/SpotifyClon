@@ -19,6 +19,8 @@ interface actions {
     setSelectedFilter: (value: string) => void
     styleHeader: boolean
     setHeaderStyle: (value: boolean) => void
+    menuState: boolean
+    setMenuState: (value: boolean) => void
 }
 
 export const useButtonsStore = create<actions>((set) => {
@@ -59,6 +61,10 @@ export const useButtonsStore = create<actions>((set) => {
         styleHeader: true,
         setHeaderStyle: (value: boolean) => {
             set({ styleHeader: value })
+        },
+        menuState: true,
+        setMenuState: (value: boolean) => {
+            set({ menuState: value })
         }
     }
 })

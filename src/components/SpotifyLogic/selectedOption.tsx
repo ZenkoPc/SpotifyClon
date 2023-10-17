@@ -4,6 +4,7 @@ import { PlayAlbumIcon } from "../../icons/playAlbum"
 import { usePlaylistStore } from "../../store/usePlaylistStore"
 import { usePodcastStore } from "../../store/usePodcastStore"
 import { Loading } from "../loading"
+import { useArtistStore } from "../../store/useArtistStore"
 
 export const SelectedOption = () => {
 
@@ -15,6 +16,7 @@ export const SelectedOption = () => {
     const setPlaylist = usePlaylistStore(store => store.handleClick)
     const setPodcastSelected = usePodcastStore(store => store.setPodcastSelected)
     const loading = useSearchStore(store => store.loadingResults)
+    const setArtistInfo = useArtistStore(store => store.setArtistInfo)
 
     const handleEpisode = (value: {}) => {
         setPage('episode')
@@ -30,7 +32,12 @@ export const SelectedOption = () => {
         setPlaylist(value)
         setPage('playlist')
     }
-    console.log(loading)
+    
+    const handleClick = (value: string) => {
+        setArtistInfo(value)
+        setPage('artist')
+    }
+
     return (
         <>
             {loading && <Loading />}
@@ -48,11 +55,11 @@ export const SelectedOption = () => {
                         <h2 className="font-bold text-2xl tracking-tight">
                             Artistas
                         </h2>
-                        <div className='mt-9 grid grid-cols-fluid gap-5'>
+                        <div className='mt-9 flex overflow-x-scroll md:grid md:grid-cols-fluid gap-5'>
                         {
                             results?.artists?.items?.map((ob) => {
                                 return (
-                                    <div className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                                    <div onClick={() => { handleClick(ob?.id) }} className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                         <div className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                             <div className="p-2 h-40 relative">
                                                 <img className="w-full rounded-full h-full" src={ob?.images[0]?.url} alt="" />
@@ -80,11 +87,11 @@ export const SelectedOption = () => {
                         <h2 className="font-bold text-2xl tracking-tight">
                             Albumes
                         </h2>
-                        <div className='mt-9 grid grid-cols-fluid gap-5'>
+                        <div className='mt-9 flex overflow-x-scroll md:grid md:grid-cols-fluid gap-5'>
                             {
                                     results?.albums?.items?.map((ob) => {
                                         return (
-                                            <div className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                                            <div onClick={() => { handleClick(ob?.id)} } className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                                 <div className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                     <div className="p-2 h-40 relative">
                                                         <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />
@@ -111,7 +118,7 @@ export const SelectedOption = () => {
                             <h2 className="font-bold text-2xl tracking-tight">
                                 Listas
                             </h2>
-                            <div className='mt-9 grid grid-cols-fluid gap-5'>
+                            <div className='mt-9 flex overflow-x-scroll md:grid md:grid-cols-fluid gap-5'>
                                 {
                                         results?.playlists?.items?.map((ob) => {
                                             return (
@@ -144,7 +151,7 @@ export const SelectedOption = () => {
                             <h2 className="font-bold text-2xl tracking-tight">
                                 Podcast
                             </h2>
-                            <div className='mt-9 grid grid-cols-fluid gap-5'>
+                            <div className='mt-9 flex overflow-x-scroll md:grid md:grid-cols-fluid gap-5'>
                                 {
                                         results?.shows?.items?.map((ob) => {
                                             return (
@@ -177,7 +184,7 @@ export const SelectedOption = () => {
                             <h2 className="font-bold text-2xl tracking-tight">
                                 Episodios
                             </h2>
-                            <div className='mt-9 grid grid-cols-fluid gap-5'>
+                            <div className='mt-9 flex overflow-x-scroll md:grid md:grid-cols-fluid gap-5'>
                                 {
                                         results?.episodes?.items?.map((ob) => {
                                             return (
