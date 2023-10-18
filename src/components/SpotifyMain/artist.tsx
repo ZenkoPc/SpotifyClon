@@ -10,6 +10,7 @@ import { Track } from "../../types/typesArtist"
 import { PauseIcon } from "../../icons/pause"
 import { usePlaylistStore } from "../../store/usePlaylistStore"
 import { useAlbumStore } from "../../store/useAlbumStore"
+import { NotFound } from "../notfound"
 
 const audio = new Audio('')
 
@@ -55,7 +56,8 @@ export const Artist = () => {
     return (
         <>
             {loading && <Loading />}
-            {!loading && 
+            {!loading && artistInfo?.name === undefined && <NotFound /> }
+            {!loading && artistInfo?.name !== undefined &&
                 <div className="w-full h-full bg-gradient-to-b from-overHighGray to-overBlack rounded-lg overflow-scroll">
                     <div className="h-36 md:h-64 lg:h-96 relative" style={{ backgroundColor: color[1] }}>
                             <ColorExtractor 
