@@ -27,7 +27,7 @@ export const DefaultSearch = () => {
             <h1 className="text-2xl text-white font-bold tracking-tight">
                 Explorar Todo
             </h1>
-            <div className="grid grid-cols-fluid gap-7 mt-10">
+            <div className=" flex overflow-scroll overflow-y-hidden md:grid md:grid-cols-fluid gap-7 mt-10">
                 <div onClick={handlePodcast} className="relative group min-w-[170px] max-w-[190px] md:min-w-[180px]">
                     <div className="flex flex-col relative justify-between w-full h-full hover:cursor-pointer rounded-lg" style={{ backgroundColor: randomColor() }}>
                         <div className="w-full p-3 relative flex flex-col overflow-hidden h-[170px] gap-4">

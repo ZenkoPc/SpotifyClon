@@ -7,7 +7,6 @@ export const LoginPodcastModal = () => {
     const defImg = usePodcastStore(store => store.modalImg)
     const modal = useButtonsStore(store => store.listenPodcastModal)
     const setModal = useButtonsStore(store => store.setListenPodcastModal)
-    useEffect(() => { console.log(modal) }, [modal])
     const styles = modal
     ? 'absolute h-full w-full transition-all bg-black z-[55] top-0 opacity-80 duration-700'
     : 'absolute h-full w-full transition-all bg-black z-[0] top-0 opacity-0 duration-700'
