@@ -94,17 +94,17 @@ export const SelectedOption = () => {
                                             <div onClick={() => { handleClick(ob?.id)} } className="relative group min-h-[270px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                                 <div className="flex flex-col w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                     <div className="p-2 h-40 relative">
-                                                        <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />
+                                                        <img className="w-full rounded-lg h-full" src={ob?.images[0]?.url} alt="" />
                                                     </div>
                                                     <div>
                                                         <div className="w-full p-3">
                                                             <h3 className="text-white font-bold">
-                                                                {ob.name.slice(0,10)}...
+                                                                {ob?.name?.slice(0,10)}...
                                                             </h3>
                                                         </div>
                                                         <div className="pl-3">
                                                             <p className="text-sm text-primaryGray font-semibold">
-                                                                {ob.release_date.split('-')[0]} • {ob.artists[0].name}
+                                                                {ob?.release_date?.split('-')[0]} • {ob?.artists[0]?.name}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -125,16 +125,16 @@ export const SelectedOption = () => {
                                                 <div onClick={() => { handleSelectPlaylist(ob) }} className="relative group h-[320px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                                     <div className="flex flex-col justify-between w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                         <div className="p-2 h-40 relative">
-                                                            <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />
+                                                            <img className="w-full rounded-lg h-full" src={ob?.images[0]?.url} alt="" />
                                                         </div>
                                                         <div className="w-full p-3">
                                                             <h3 className="text-white font-bold">
-                                                                {ob.name.length > 20 ? ob.name.slice(0,20) : ob.name}
+                                                                {ob?.name?.length > 20 ? ob?.name?.slice(0,20) : ob?.name}
                                                             </h3>
                                                         </div>
                                                         <div className="pl-3">
                                                             <p className="text-sm text-primaryGray font-semibold">
-                                                                {ob.description.slice(0,25)}...
+                                                                {ob?.description?.slice(0,25)}...
                                                             </p>
                                                         </div>
                                                     </div>
@@ -155,19 +155,19 @@ export const SelectedOption = () => {
                                 {
                                         results?.shows?.items?.map((ob) => {
                                             return (
-                                                <div onClick={() => { handlePodcast(ob.id) }} className="relative group h-[320px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
+                                                <div onClick={() => { handlePodcast(ob?.id) }} className="relative group h-[320px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                                     <div className="flex flex-col justify-between w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                         <div className="p-2 h-40 relative">
-                                                            <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />
+                                                            <img className="w-full rounded-lg h-full" src={ob?.images[0]?.url} alt="" />
                                                         </div>
                                                         <div className="w-full p-3">
                                                             <h3 className="text-white font-bold">
-                                                                {ob.name.length > 20 ? ob.name.slice(0,20) : ob.name}
+                                                                {ob?.name?.length > 20 ? ob?.name?.slice(0,20) : ob?.name}
                                                             </h3>
                                                         </div>
                                                         <div className="pl-3">
                                                             <p className="text-sm text-primaryGray font-semibold">
-                                                                {ob.description.slice(0,25)}...
+                                                                {ob?.description?.slice(0,25)}...
                                                             </p>
                                                         </div>
                                                     </div>
@@ -191,16 +191,16 @@ export const SelectedOption = () => {
                                                 <div onClick={() => { handleEpisode(ob) }} className="relative group h-[320px] pb-4 min-w-[175px] max-w-[175px]" key={ob?.id}>
                                                     <div className="flex flex-col justify-between w-full p-2 h-full hover:cursor-pointer rounded-lg hover:bg-overHighGray bg-overBlack2">
                                                         <div className="p-2 h-40 relative">
-                                                            <img className="w-full rounded-lg h-full" src={ob.images[0].url} alt="" />
+                                                            <img className="w-full rounded-lg h-full" src={ob?.images[0]?.url} alt="" />
                                                         </div>
                                                         <div className="w-full p-3">
                                                             <h3 className="text-white font-bold">
-                                                                {ob.name.length > 20 ? ob.name.slice(0,20) : ob.name}
+                                                                {ob?.name?.length > 20 ? ob?.name?.slice(0,20) : ob?.name}
                                                             </h3>
                                                         </div>
                                                         <div className="pl-3">
                                                             <p className="text-sm text-primaryGray font-semibold">
-                                                                {ob.description.slice(0,25)}...
+                                                                {ob?.description?.slice(0,25)}...
                                                             </p>
                                                         </div>
                                                     </div>
